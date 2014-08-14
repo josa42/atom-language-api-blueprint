@@ -1,0 +1,103 @@
+'name': 'Api Blueprint'
+'scopeName': 'source.gfm.apib'
+'fileTypes': ['apib', 'md']
+'patterns': [{
+    'captures': {
+        '1': {
+            'name': 'string.host.apib'
+        }
+    },
+    'match': '^HOST:(.*)'
+    'name': 'keyword.host.apib'
+},{
+    'captures': {
+        '1': {
+            'name': 'string.format.apib'
+        }
+    },
+    'match': '^FORMAT:(.*)'
+    'name': 'keyword.format.apib'
+},{
+    'match': '^\\+ (Request)( \\((.+)\\))?'
+    'name': 'markup.heading.apib'
+    'captures': {
+        '1': {'name': 'keyword.request.apib'}
+        '3': {'name': 'string.accept.apib'}
+    }
+},{
+    'match': '^\\+ (Response)( ([0-9]+)( \\((.+)\\))?)?'
+    'name': 'markup.heading.apib'
+    'captures': {
+        '1': {'name': 'keyword.response.apib'}
+        '3': {'name': 'string.status.apib'}
+        '5': {'name': 'string.content-type.apib'}
+    }
+},{
+    'match': '^\\+ (Request)( \\((.+)\\))?'
+    'name': 'markup.heading.apib'
+    'captures': {
+        '1': {'name': 'keyword.request.apib'}
+        '3': {'name': 'string.accept.apib'}
+    }
+},{
+    'match': '^\\+ (Model)( \\((.+)\\))?'
+    'name': 'markup.heading.apib'
+    'captures': {
+        '1': {'name': 'keyword.model.apib'}
+        '3': {'name': 'string.content-type.apib'}
+    }
+},{
+    'match': '^\\+ (Parameters)\s*$'
+    'name': 'markup.heading.apib'
+    'captures': {
+        '1': {'name': 'keyword.parameters.apib'}
+    }
+},{
+    'match': '^(\\t|    )\\+ (Headers)\s*$'
+    'name': 'markup.heading.apib'
+    'captures': {
+        '2': {'name': 'keyword.headers.apib'}
+    }
+},{
+    'match': '^(\\t|    )\\+ (Body)\s*$'
+    'name': 'markup.heading.apib'
+    'captures': {
+        '2': {'name': 'keyword.body.apib'}
+    }
+},{
+    'match': '^# (Group).*[ ]*$'
+    'name': 'markup.heading.apib'
+    'captures': {
+        '1': {'name': 'keyword.group.apib'}
+    }
+},{
+    'match': '^## (/.*)[ ]*$'
+    'name': 'markup.heading.apib'
+    'captures': {
+        '1': {'name': 'string.path.apib'}
+    }
+},{
+    'match': '^## .+\\[(/.*)\\][ ]*$'
+    'name': 'markup.heading.apib'
+    'captures': {
+        '1': {'name': 'string.path.apib'}
+    }
+},{
+    'match': '^### (POST|PUT|GET|DELETE)[ ]*$'
+    'name': 'markup.heading.apib'
+    'captures': {
+        '1': {
+            'name': 'keyword.method.apib'
+        }
+    }
+},{
+    'match': '^### .* \\[(POST|PUT|GET|DELETE)\\][ ]*$'
+    'name': 'markup.heading.apib'
+    'captures': {
+        '1': {
+            'name': 'keyword.method.apib'
+        }
+    }
+},{
+    "include": "source.gfm"
+}]

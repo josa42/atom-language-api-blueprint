@@ -1,0 +1,11 @@
+{
+  "name": "language-api-blueprint",
+  "version": "1.0.0",
+  "description": "Syntax highlighting for Api blueprint.",
+  "repository": "https://github.com/josa42/atom-language-api-blueprint",
+  "engines": {
+    "atom": "*"
+  },
+  "author": "Josa Gesell <josa@gesell.me>",
+  "license": "MIT"
+}
